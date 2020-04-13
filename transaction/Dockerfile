@@ -2,12 +2,12 @@ FROM node:8.11.4
 
 ARG NPM_TOKEN
 
-WORKDIR /analytics-consumer
+WORKDIR /transaction
 COPY ./package*.json ./
 
 # Install
 RUN npm install
 
-EXPOSE 3001
+EXPOSE 3000
 
 CMD ["npm", "run", "start:dev"]
